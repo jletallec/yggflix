@@ -1,4 +1,4 @@
-from media import Media
+from .media import Media
 
 
 class Movie(Media):

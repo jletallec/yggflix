@@ -2,8 +2,8 @@ from RTN import parse
 from RTN.models import ParsedData
 from urllib.parse import quote
 
-from utils.models.media import Media
-from utils.models.series import Series
+from .models.media import Media
+from .models.series import Series
 
 
 class TorrentItem:

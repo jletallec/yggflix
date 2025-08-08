@@ -1,11 +1,11 @@
 from typing import List, Union
 from RTN import parse
 
-from utils.detection import detect_languages
+from .utils.detection import detect_languages
 from yggflix_result import YggflixResult
-from utils.models.movie import Movie
-from utils.models.series import Series
-from settings import settings
+from .utils.models.movie import Movie
+from .utils.models.series import Series
+from settings import *
 from yggflix_api import YggflixAPI
 
 
@@ -16,10 +16,7 @@ class YggflixService:
         self.yggflix = YggflixAPI()
         self.has_tmdb = config.get("metadataProvider") == "tmdb"
 
-        if settings.ygg_unique_account and settings.ygg_passkey:
-            self.ygg_passkey = settings.ygg_passkey
-        else:
-            self.ygg_passkey = config.get("yggPasskey")
+        self.ygg_passkey = YGG_PASSKEY
 
     def search(self, media: Union[Movie, Series]) -> List[YggflixResult]:
         """
@@ -49,8 +46,8 @@ class YggflixService:
 
     def __process_download_link(self, id: int) -> str:
         """Generate the download link for a given torrent."""
-        if settings.yggflix_url:
-            return f"{settings.yggflix_url}/api/torrent/{id}/download?passkey={self.ygg_passkey}"
+        if YGGFLIX_URL:
+            return f"{YGGFLIX_URL}/api/torrent/{id}/download?passkey={self.ygg_passkey}"
 
     def __search_movie(self, media: Movie) -> List[dict]:
         """Search for a movie on Yggflix."""

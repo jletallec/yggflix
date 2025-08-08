@@ -1,7 +1,7 @@
 from RTN import parse
 
-from utils.torrent_item import TorrentItem
-from utils.detection import detect_languages
+from .utils.torrent_item import TorrentItem
+from .utils.detection import detect_languages
 
 
 class YggflixResult:
