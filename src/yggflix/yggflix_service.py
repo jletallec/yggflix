@@ -2,11 +2,11 @@ from typing import List, Union
 from RTN import parse
 
 from .utils.detection import detect_languages
-from yggflix_result import YggflixResult
+from .yggflix_result import YggflixResult
 from .utils.models.movie import Movie
 from .utils.models.series import Series
-from settings import *
-from yggflix_api import YggflixAPI
+from .settings import *
+from .yggflix_api import YggflixAPI
 
 
 class YggflixService:

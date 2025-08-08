@@ -1,4 +1,4 @@
-from yggflix_api import YggflixAPI
+from .yggflix_api import YggflixAPI
 from typing import Dict, List, Optional, Tuple, Any
 
 class TorrentSelector:

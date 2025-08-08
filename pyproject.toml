@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yggflix"
-version = "0.1.0"
+version = "0.1.1"
 description = "API client for YggTorrent with smart torrent selection"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Josselin LE TALLEC", email = "jletallec@icloud.com"},
+    {name = "jletallec", email = "jletallec@icloud.com"},
 ]
 classifiers = [
     "Development Status :: 4 - Beta",

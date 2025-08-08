@@ -3,7 +3,7 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from settings import *
+from .settings import *
 
 class YggflixAPI:
     def __init__(
