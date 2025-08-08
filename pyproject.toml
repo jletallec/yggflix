@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yggflix"
-version = "0.1.1"
+version = "0.1.2"
 description = "API client for YggTorrent with smart torrent selection"
 readme = "README.md"
 license = {text = "MIT"}
